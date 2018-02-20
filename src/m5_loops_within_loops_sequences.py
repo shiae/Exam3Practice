@@ -32,7 +32,7 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_integers()
-    run_test_big_letters()
+    # run_test_big_letters()
 
 
 def run_test_integers():
@@ -95,7 +95,7 @@ def integers(sequence_of_sequences):
       :rtype: list of int
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     ####################################################################
@@ -118,6 +118,14 @@ def integers(sequence_of_sequences):
     #    DIFFICULTY:      6
     #    TIME ESTIMATE:  10 minutes.
     # ------------------------------------------------------------------
+
+    a_list = []
+    for k in range(len(sequence_of_sequences)):
+        sequence = sequence_of_sequences[k]
+        for j in range(len(sequence)):
+            if type(sequence[j]) == int:
+                a_list = a_list + [sequence[j]]
+    return a_list
 
 
 def run_test_big_letters():
