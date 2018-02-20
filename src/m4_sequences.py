@@ -37,8 +37,8 @@ def main():
     """ Calls the   TEST   functions in this module. """
     # run_test_practice_problem4a()
     # run_test_practice_problem4b()
-    run_test_practice_problem4c()
-    # run_test_practice_problem4d()
+    # run_test_practice_problem4c()
+    run_test_practice_problem4d()
 
 
 def is_prime(n):
@@ -306,7 +306,7 @@ def practice_problem4c(points):
       :rtype: rg.Point | string
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # IMPORTANT: This problem is your LOWEST PRIORITY for preparing
@@ -321,6 +321,11 @@ def practice_problem4c(points):
     for k in range(len(points)):
         point = points[k]
         if is_prime(point.x) and is_prime(point.y):
+            original_x = point.x
+            point.x = point.y
+            point.y = original_x
+            return point
+    return "Not found"
 
 
 def run_test_practice_problem4d():
@@ -413,7 +418,12 @@ def practice_problem4d(sequence):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 minutes.
     ####################################################################
-
+    add = 0
+    for k in range(len(sequence)-1):
+        if is_prime(sequence[k]) and is_prime(sequence[k+1]) and sequence[k]\
+                != sequence[k+1]:
+            add = add + sequence[k]
+    return add
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
