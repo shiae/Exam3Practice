@@ -5,7 +5,7 @@ This problem provides practice at:
   ***  LOOPS WITHIN LOOPS, SEQUENCES and MUTATION  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Allison Shi.
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
